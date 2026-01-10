@@ -8,8 +8,12 @@ body{
        align-items: center;
        background-color: #111;
        color:rgba(255, 255, 255, 0.87);
+       overflow: hidden;
 
        
+}
+.gameArea{
+       /* insallah kalke theke suru hobe  */
 }
 
 
