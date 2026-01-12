@@ -71,8 +71,18 @@ paddle2{
        top:88px;
        display: flex;
        height:60px;
-       
+       justify-content: center;
+       align-items: center;
+
 }
+.player1score {
+       left:calc(50% -200px);
+
+
+
+}
+
+
 
 
 
