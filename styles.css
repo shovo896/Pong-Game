@@ -81,7 +81,15 @@ body{
 .player2score {
        left:calc(50% + 120px);
 }
-
+.startText{
+       position:absolute;
+       margin:0px;
+       top:50%;
+       z-index:1;
+       left:50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+}
 
 
 
