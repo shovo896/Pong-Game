@@ -9,6 +9,8 @@ let gameRunning = false;
 // start the game 
 function startGame(){
        gameRunning = true;
+       startText.style.display = "block";
 
 }
+startGame();
 
