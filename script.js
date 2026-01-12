@@ -1,9 +1,15 @@
+// create js representation from the DOM model 
+
+
 // Game variables 
 let gameRunning = false;
 
 // start the game 
-function startGame(arg1,arg2){
-       
+function startGame(){
+       gameRunning = true;
+
+
+
 
 }
 
