@@ -6,11 +6,18 @@ console.log(startText);
 // Game variables 
 let gameRunning = false;
 
-// start the game 
-function startGame(){
-       gameRunning = true;
-       startText.style.display = "block";
+document.addEventListener('keydown', startGame);
 
+// start the game 
+function startGame() {
+       if (gameRunning) {
+              return;
+       }
+       gameRunning = true;
+       startText.style.display = "none";
+       document.removeEventListener('keydown', startGame);
 }
-startGame();
+//startGame();
+
+
 
