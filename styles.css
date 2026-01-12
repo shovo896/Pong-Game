@@ -21,6 +21,7 @@ body{
        border:#919bbec7 10px solid ;
        border-radius: 4px;
        backdrop-filter: blur(4px);
+       transform: perspective(1000px) rotateX(33deg) scaleX(0.54) scaleY(0.85);
 
 
 }
