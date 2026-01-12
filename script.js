@@ -1,5 +1,6 @@
 // create js representation from the DOM model 
 const startText=document.getElementById('startText');
+console.log(startText);
 
 
 // Game variables 
