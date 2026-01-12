@@ -38,7 +38,7 @@ body{
        position: absolute;
        top:150px;
 }
-paddle2{
+.paddle2{
        right:0px;
 }
 .ball {
@@ -77,10 +77,11 @@ paddle2{
 }
 .player1score {
        left:calc(50% -200px);
-
-
-
 }
+.player2score {
+       left:calc(50% + 120px);
+}
+
 
 
 
