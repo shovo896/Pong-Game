@@ -19,6 +19,8 @@ body{
        background:rgba(7, 26, 49, 0.6);
        top:182px;
        border:#919bbec7 10px solid ;
+       border-radius: 4px;
+       backdrop-filter: blur(4px);
 
 
 }
