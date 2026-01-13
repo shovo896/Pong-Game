@@ -6,6 +6,7 @@ console.log(startText);
 // Game variables 
 let gameRunning = false;
 
+
 document.addEventListener('keydown', startGame);
 
 // start the game 
