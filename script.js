@@ -59,8 +59,6 @@ function handleKeyDown(e){
 function updatePaddle() {
        console.log(keysPressed);
 
-
-
 }
 
 
