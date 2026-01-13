@@ -5,6 +5,8 @@ const player2ScoreEl = document.getElementById('player2score');
 const paddle1=document.getElementById('paddle1');
 const paddle2 = document.getElementById('paddle2');
 const maxPaddleSpeed=5;
+const gameHeight=400;
+const gameWidth=600;
 
 // Game variables
 let gameRunning = false;
