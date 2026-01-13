@@ -47,7 +47,7 @@ function gameLoop() {
        
 }
 function updatePaddle() {
-       console.log('keyPressed');
+       console.log(keysPressed);
 
 
 
