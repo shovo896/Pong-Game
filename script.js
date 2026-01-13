@@ -9,6 +9,7 @@ let player1Score = 0;
 let player2Score = 0;
 let keysPressed = {};
 let paddle1Speed = 0;
+let paddle1Y = 150;
 
 initScoreboard();
 
@@ -64,6 +65,8 @@ function updatePaddle1() {
               // move paddle 1 up
               paddle1Speed= -5 ;
        }
+       paddle1Y+= paddle1Speed;
+       console.log(paddle1Y);
 
 }
 
