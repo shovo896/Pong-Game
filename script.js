@@ -38,6 +38,12 @@ function initScoreboard() {
               player2ScoreEl.textContent = String(player2Score);
        }
 }
+function gameLoop() {
+       if (gameRunning){
+              console.log("Game is running");}
+              setTimeout(gameLoop,8);
+       
+}
 
 
 
