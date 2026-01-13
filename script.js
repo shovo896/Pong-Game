@@ -8,6 +8,7 @@ let gameRunning = false;
 let player1Score = 0;
 let player2Score = 0;
 let keysPressed = {};
+let paddle1Speed = 0;
 
 initScoreboard();
 
@@ -58,10 +59,14 @@ function handleKeyUp(e){
 
 
 
-function updatePaddle() {
-       console.log(keysPressed);
+function updatePaddle1() {
+       if (keysPressed['w']) {
+              // move paddle 1 up
+              paddle1Speed= -5 ;
+       }
 
 }
+
 
 
 
