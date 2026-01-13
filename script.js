@@ -18,12 +18,16 @@ function startGame() {
               return;
        }
        gameRunning = true;
-       console.log('start');
+       gameLoop();
+       
        if (startText) {
               startText.style.display = 'none';
        }
        document.removeEventListener('keydown', startGame);
+
+
 }
+
 //startGame();
 
 function initScoreboard() {
@@ -34,6 +38,8 @@ function initScoreboard() {
               player2ScoreEl.textContent = String(player2Score);
        }
 }
+
+
 
 
 
