@@ -2,6 +2,7 @@
 const startText = document.getElementById('startText');
 const player1ScoreEl = document.getElementById('player1score');
 const player2ScoreEl = document.getElementById('player2score');
+const paddle1=document.getElementById('paddle1');
 
 // Game variables
 let gameRunning = false;
@@ -44,11 +45,10 @@ function initScoreboard() {
        }
 }
 function gameLoop() {
-       if (gameRunning){
-              updatePaddle();
-              
-              setTimeout(gameLoop,8);}
-       
+       if (gameRunning) {
+              updatePaddle1();
+              setTimeout(gameLoop, 8);
+       }
 }
 
 function handleKeyDown(e){
@@ -61,15 +61,24 @@ function handleKeyUp(e){
 
 
 function updatePaddle1() {
-       if (keysPressed['w']) {
-              // move paddle 1 up
-              paddle1Speed= -5 ;
+       if (!paddle1) {
+              return;
        }
-       paddle1Y+= paddle1Speed;
-       console.log(paddle1Y);
-
+       if (keysPressed['w']) {
+              paddle1Speed = -5;
+       } else if (keysPressed['s']) {
+              paddle1Speed = 5;
+       } else {
+              paddle1Speed = 0;
+       }
+       paddle1Y += paddle1Speed;
+       if (paddle1Y < 0) {
+              paddle1Y = 0;
+       } else if (paddle1Y > 300) {
+              paddle1Y = 300;
+       }
+       paddle1.style.top = paddle1Y + 'px';
 }
-
 
 
 
