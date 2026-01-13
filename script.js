@@ -13,6 +13,7 @@ initScoreboard();
 
 document.addEventListener('keydown', startGame, { once: true });
 document.addEventListener('keydown', handleKeyDown);
+document.addEventListener("keyup", handleKeyUp);
 
 // start the game 
 function startGame() {
