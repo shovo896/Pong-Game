@@ -7,6 +7,7 @@ const player2ScoreEl = document.getElementById('player2score');
 let gameRunning = false;
 let player1Score = 0;
 let player2Score = 0;
+let keysPressed = {};
 
 initScoreboard();
 
@@ -40,10 +41,18 @@ function initScoreboard() {
 }
 function gameLoop() {
        if (gameRunning){
-              console.log("Game is running");}
-              setTimeout(gameLoop,8);
+              updatePaddle();
+              
+              setTimeout(gameLoop,8);}
        
 }
+function updatePaddle() {
+       console.log('keyPressed');
+
+
+
+}
+
 
 
 
