@@ -46,6 +46,15 @@ function gameLoop() {
               setTimeout(gameLoop,8);}
        
 }
+
+function handleKeyDown(e){
+       keysPressed[e.key] = true;
+}
+
+
+
+
+
 function updatePaddle() {
        console.log(keysPressed);
 
