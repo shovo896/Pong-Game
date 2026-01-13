@@ -22,6 +22,7 @@ function startGame() {
        if (startText) {
               startText.style.display = 'none';
        }
+       document.removeEventListener('keydown', startGame);
 }
 //startGame();
 
