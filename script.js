@@ -18,9 +18,9 @@ function startGame() {
               return;
        }
        gameRunning = true;
-       //if (startText) {
-              //startText.style.display = "none";
-       //}
+       if (startText) {
+              startText.style.display = "none";
+       }
 }
 //startGame();
 
