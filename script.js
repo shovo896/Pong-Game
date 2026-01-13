@@ -19,7 +19,8 @@ function startGame() {
        }
        gameRunning = true;
        console.log('start');
-              startText.style.display = "none";
+       if (startText) {
+              startText.style.display = 'none';
        }
 }
 //startGame();
@@ -32,7 +33,6 @@ function initScoreboard() {
               player2ScoreEl.textContent = String(player2Score);
        }
 }
-
 
 
 
