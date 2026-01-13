@@ -12,6 +12,7 @@ let keysPressed = {};
 initScoreboard();
 
 document.addEventListener('keydown', startGame, { once: true });
+document.addEventListener('keydown', handleKeyDown);
 
 // start the game 
 function startGame() {
