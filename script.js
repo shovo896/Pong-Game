@@ -18,7 +18,7 @@ function startGame() {
               return;
        }
        gameRunning = true;
-       if (startText) {
+       console.log('start');
               startText.style.display = "none";
        }
 }
