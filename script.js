@@ -51,8 +51,9 @@ function gameLoop() {
 function handleKeyDown(e){
        keysPressed[e.key] = true;
 }
-
-
+function handleKeyUp(e){
+       keysPressed[e.key] = false;
+}
 
 
 
@@ -60,6 +61,7 @@ function updatePaddle() {
        console.log(keysPressed);
 
 }
+
 
 
 
