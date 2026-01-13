@@ -3,6 +3,7 @@ const startText = document.getElementById('startText');
 const player1ScoreEl = document.getElementById('player1score');
 const player2ScoreEl = document.getElementById('player2score');
 const paddle1=document.getElementById('paddle1');
+const maxPaddleSpeed=5;
 
 // Game variables
 let gameRunning = false;
