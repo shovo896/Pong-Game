@@ -106,6 +106,7 @@ function updatePaddle2() {
        }
        paddle2.style.top = paddle2Y + 'px';
 }
+       
 
 
 
