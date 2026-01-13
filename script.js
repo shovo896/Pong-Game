@@ -54,6 +54,7 @@ function gameLoop() {
        if (gameRunning) {
               updatePaddle1();
               updatePaddle2();
+              moveBall();
               setTimeout(gameLoop, 8);
        }
 }
