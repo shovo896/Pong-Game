@@ -109,6 +109,8 @@ function updatePaddle2() {
 }
 
 
+// Ball function 
+
 
 
 
