@@ -123,18 +123,20 @@ function moveBall() {
               ballSpeedY = -ballSpeedY;
        }
        // paddle 1 movement collision 
-       if (ballX >= gameWidth -paddle1.clientWidth  && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) {
+       if (ballX <= gameWidth -paddle1.clientWidth  && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) {
               
 
        
               ballSpeedX = -ballSpeedX;
        }
+       // paddle 2 movement collision
        if (ballX >= gameWidth -paddle2.clientWidth -ball.clientWidth && ballY >= paddle2Y && ballY <= paddle1Y && ballY <= paddle2Y + paddle2.clientHeight) {
               
 
        
               ballSpeedX = -ballSpeedX;
        }
+       // out f gameArea 
 
        ball.style.left=ballX + "px";
        ball.style.top=ballY + "px";
