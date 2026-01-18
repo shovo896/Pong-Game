@@ -17,6 +17,8 @@ let paddle1Speed = 0;
 let paddle1Y = 150;
 let paddle2Speed = 0;
 let paddle2Y = 150;
+let ballX=290;
+let ballY=290;
 
 initScoreboard();
 
@@ -110,7 +112,9 @@ function updatePaddle2() {
 
 
 // Ball function 
-
+function moveBall() {
+       ballX += ballSpeedX;
+       ballY += ballSpeedY;
 
 
 
