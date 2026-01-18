@@ -122,6 +122,7 @@ function moveBall() {
        if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
               ballSpeedY = -ballSpeedY;
        }
+       // paddle 1 movement collision 
        if (ballX >= gameWidth -paddle1.clientWidth  && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) {
               
 
