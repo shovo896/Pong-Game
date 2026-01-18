@@ -10,6 +10,9 @@ const gameWidth=600;
 const ball =document.getElementById('ball');
 const player1ScoreElement=document.getElementById('player1score');
 const player2ScoreElement=document.getElementById('player2score');
+const lossSound=document.getElementById('lossSound');
+const paddleSound=document.getElementById('paddleSound');
+const wallSound=document.getElementById('wallSound');
 
 
 
@@ -153,11 +156,14 @@ function moveBall() {
        // out of gameArea
        if (ballX  <=0) {
               player2Score ++ ;
+
+              playSound(lossSound);
               initScoreboard();
               resetBall();
               pauseGame()
        } else if (ballX > gameWidth-ball.clientWidth) {
               player1Score ++;
+              playSound(lossSound);
               initScoreboard();
               resetBall();
               pauseGame();
@@ -182,6 +188,11 @@ function initScoreboard(){
 function pauseGame(){
        gameRunning = false;
        document.addEventListener('keydown',startGame );
+
+}
+function playSound(sound){
+       sound.currentTime=0;
+       sound.play();
 
 }
 
