@@ -122,7 +122,7 @@ function moveBall() {
        if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
               ballSpeedY = -ballSpeedY;
        }
-       if (ballX >= gameWidth -paddle1.clientWidth -ball.clientWidth && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) {
+       if (ballX >= gameWidth -paddle1.clientWidth  && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) {
               
 
        
