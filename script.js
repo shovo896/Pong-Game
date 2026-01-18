@@ -7,6 +7,7 @@ const paddle2 = document.getElementById('paddle2');
 const maxPaddleSpeed=5;
 const gameHeight=400;
 const gameWidth=600;
+const ball =document.getElementById('ball');
 
 // Game variables
 let gameRunning = false;
@@ -117,6 +118,8 @@ function updatePaddle2() {
 function moveBall() {
        ballX += ballSpeedX;
        ballY += ballSpeedY;
+       ball.style.left=ballX + "px";
+       ball.style.top=ballY + "px";
 
 }
 
