@@ -9,6 +9,7 @@ const gameHeight=400;
 const gameWidth=600;
 const ball =document.getElementById('ball');
 
+
 // Game variables
 let gameRunning = false;
 let player1Score = 0;
@@ -22,6 +23,7 @@ let ballX=290;
 let ballY=290;
 let ballSpeedX=2;
 let ballSpeedY=2;
+
 
 initScoreboard();
 
@@ -116,33 +118,62 @@ function updatePaddle2() {
 
 // Ball function 
 function moveBall() {
+       if (!ball) {
+              return;
+       }
        ballX += ballSpeedX;
        ballY += ballSpeedY;
 
        if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
               ballSpeedY = -ballSpeedY;
        }
-       // paddle 1 movement collision 
-       if (ballX <= gameWidth -paddle1.clientWidth  && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) {
-              
+       const ballSize = ball.clientWidth;
 
-       
+       // paddle 1 movement collision 
+       if (
+              ballSpeedX < 0 &&
+              ballX <= paddle1.clientWidth &&
+              ballY + ballSize >= paddle1Y &&
+              ballY <= paddle1Y + paddle1.clientHeight
+       ) {
               ballSpeedX = -ballSpeedX;
        }
        // paddle 2 movement collision
-       if (ballX >= gameWidth -paddle2.clientWidth -ball.clientWidth && ballY >= paddle2Y && ballY <= paddle1Y && ballY <= paddle2Y + paddle2.clientHeight) {
-              
-
-       
+       if (
+              ballSpeedX > 0 &&
+              ballX + ballSize >= gameWidth - paddle2.clientWidth &&
+              ballY + ballSize >= paddle2Y &&
+              ballY <= paddle2Y + paddle2.clientHeight
+       ) {
               ballSpeedX = -ballSpeedX;
        }
-       // out f gameArea 
+       // out of gameArea
+       if (ballX  <=0) {
+              player2Score ++ ;
+              initScoreboard();
+              resetBall();
+       } else if (ballX > gameWidth-ball.clientWidth) {
+              player1Score ++;
+              initScoreboard();
+              resetBall();
+       }
 
        ball.style.left=ballX + "px";
        ball.style.top=ballY + "px";
 
 }
 
+function resetBall() {
+       ballX = (gameWidth - ball.clientWidth) / 2;
+       ballY = (gameHeight - ball.clientHeight) / 2;
+       ballSpeedX = ballSpeedX > 0 ? 2 : -2;
+       ballSpeedY = ballSpeedY > 0 ? 2 : -2;
+}
+function initScoreboard(){
+       player1ScoreElement.textContent=player1Score;
+       player2ScoreElement.textContent=player2Score;
+
+}
 
 
 
