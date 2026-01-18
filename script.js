@@ -155,10 +155,12 @@ function moveBall() {
               player2Score ++ ;
               initScoreboard();
               resetBall();
+              pauseGame()
        } else if (ballX > gameWidth-ball.clientWidth) {
               player1Score ++;
               initScoreboard();
               resetBall();
+              pauseGame();
        }
 
        ball.style.left=ballX + "px";
@@ -175,6 +177,11 @@ function resetBall() {
 function initScoreboard(){
        player1ScoreElement.textContent=player1Score;
        player2ScoreElement.textContent=player2Score;
+
+}
+function pauseGame(){
+       gameRunning = false;
+       document.addEventListener('keydown',startGame );
 
 }
 
