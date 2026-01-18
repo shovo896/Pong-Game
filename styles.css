@@ -68,7 +68,7 @@ body{
 }
 .score{
        position: absolute;
-       top:112px;
+       top:185px;
        display: flex;
        height:60px;
        justify-content: center;
@@ -80,9 +80,11 @@ body{
 }
 .player1score {
        left:calc(50% - 235px);
+       transform: translateX(-35%);
 }
 .player2score {
        left:calc(50% + 205px);
+       transform: translateX(35%);
 }
 .startText{
        position:absolute;
