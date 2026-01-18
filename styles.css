@@ -68,7 +68,7 @@ body{
 }
 .score{
        position: absolute;
-       top:160px;
+       top:120px;
        display: flex;
        height:60px;
        justify-content: center;
