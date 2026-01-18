@@ -132,6 +132,7 @@ function moveBall() {
 
        if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
               ballSpeedY = -ballSpeedY;
+              playSound(wallSound);
        }
        const ballSize = ball.clientWidth;
 
@@ -143,6 +144,7 @@ function moveBall() {
               ballY <= paddle1Y + paddle1.clientHeight
        ) {
               ballSpeedX = -ballSpeedX;
+              playSound(paddleSound);
        }
        // paddle 2 movement collision
        if (
@@ -152,6 +154,7 @@ function moveBall() {
               ballY <= paddle2Y + paddle2.clientHeight
        ) {
               ballSpeedX = -ballSpeedX;
+              playSound(paddleSound);
        }
        // out of gameArea
        if (ballX  <=0) {
@@ -195,6 +198,7 @@ function playSound(sound){
        sound.play();
 
 }
+
 
 
 
