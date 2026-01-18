@@ -118,6 +118,9 @@ function moveBall() {
        ballX += ballSpeedX;
        ballY += ballSpeedY;
 
+}
+
+
 
 
 
