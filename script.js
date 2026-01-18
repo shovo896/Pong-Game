@@ -8,6 +8,9 @@ const maxPaddleSpeed=5;
 const gameHeight=400;
 const gameWidth=600;
 const ball =document.getElementById('ball');
+const player1ScoreElement=document.getElementById('player1score');
+const player2ScoreElement=document.getElementById('player2score');
+
 
 
 // Game variables
