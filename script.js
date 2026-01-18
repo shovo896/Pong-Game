@@ -19,6 +19,8 @@ let paddle2Speed = 0;
 let paddle2Y = 150;
 let ballX=290;
 let ballY=290;
+let ballSpeedX=2;
+let ballSpeedY=2;
 
 initScoreboard();
 
